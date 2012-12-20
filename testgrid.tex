@@ -114,7 +114,7 @@
   % University logo in Eyecatcher location
   {\includegraphics[height=3em]{images/psulogo.png}} 
   % Title
-  {\bf\textsc{GraphTrack: Fast and Globally Optimal Tracking in Videos}\vspace{0.5em}}
+  {\bf\textsc{Creating a Poster with the baposter package in LaTeX} \vspace{0.5em}}
   % Authors
   {\textsc{\{ Brian.Amberg and Thomas.Vetter \}@unibas.ch}}
   {% The makebox allows the title to flow into the logo, this is a hack because of the L shaped logo.
@@ -164,6 +164,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \headerbox{Position30}{name=p30,column=3,row=0}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  
    Top fourth column, c=3.  Can have 6, but default is 4
     }
 
@@ -210,10 +211,28 @@ sex & 1 & 75.37 & 75.37 & 0.38 & 0.5417 \\
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \headerbox{Position15}{name=p15,column=1,span=2,row=0, below=p11, above=p12}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-   Second column, third row
-   \begin{center}
-   \includegraphics[height=4em]{images/priqr.png}
-   \end{center}
+   \begin{minipage}{.9\linewidth}
+    Second column, third row
+    
+    \raggedright
+      Floating figures cannot be done in the headerbox environment unless you enclose it in a minipage.   All kinds of jabber, jabber, jabber, jabber, jabber, jabber, jabber, jabber, jabber,jabber, jabber, jabber,   jabber, jabber, jabber, jabber, jabber, jabber, jabber, 
+   jabber, jabber, jabber, jabber, jabber, jabber, jabber, 
+      \begin{wrapfigure}[4]{r}{0.1\textwidth}
+    \vspace{-10pt}
+    \includegraphics[height=4em]{images/priqr.png}
+    \vspace{-10pt}
+   \end{wrapfigure}
+   jabber, jabber, jabber, jabber, jabber, jabber, jabber, 
+   jabber, jabber, jabber, jabber, jabber, jabber, jabber, 
+   jabber, jabber, jabber, jabber, jabber, jabber, jabber, 
+   jabber, jabber, jabber, jabber, jabber, jabber, jabber, 
+   jabber, jabber, jabber, jabber, jabber, jabber, jabber, 
+   jabber, jabber, jabber, jabber, jabber, jabber, jabber, 
+   jabber, jabber, jabber, jabber, jabber, jabber, jabber, 
+   jabber, jabber, jabber, jabber, jabber, jabber, jabber, 
+   jabber, jabber, jabber, jabber, jabber, jabber, jabber, 
+  
+   \end{minipage}
    
     }
     
