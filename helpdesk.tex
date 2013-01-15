@@ -1,0 +1,88 @@
+\documentclass[a0paper,landscape]{baposter}
+%%
+%%Class Options (see http://www.brian-amberg.de/uni/poster/baposter/baposter_guide.pdf for more details)
+%%
+%paper layout : landscape/portrait
+%paper size: a0paper, a1paper, a2paper, a3paper, a4paper, archE
+%paper size (alternative): paperwidth=length,paperheight=length
+%margin: margin=length
+%font size fontscale=number
+%frame showframe
+\usepackage{graphicx} %to insert pictures
+\usepackage{color} %to set colors
+\usepackage{helvet} %to use helvet font
+\renewcommand{\familydefault}{\sfdefault} %set default font to sans-serif for entire document.
+\begin{document}
+\definecolor{lightblue}{rgb}{0.145,0.6666,1}
+\begin{poster}{
+  % Show grid to help with alignment
+  grid=false,
+  % Column spacing
+  colspacing=1em,
+  % Color style
+  bgColorOne=white,
+  bgColorTwo=white,
+  borderColor=lightblue,
+  headerColorOne=black,
+  headerColorTwo=lightblue,
+  headerFontColor=white,
+  boxColorOne=white,
+  boxColorTwo=lightblue,
+  % Format of textbox
+  textborder=roundedleft,
+  % Format of text header
+  eyecatcher=true,
+  headerborder=closed,
+  headerheight=0.1\textheight,
+%  textfont=\sc, An example of changing the text font
+  headershape=roundedright,
+  headershade=shadelr,
+  headerfont=\Large\bf\textsc, %Sans Serif
+  textfont={\setlength{\parindent}{1.5em}},
+  boxshade=plain,
+%  background=shade-tb,
+  background=plain,
+  linewidth=2pt
+}
+%%
+%%POSTER HEADER
+% University logo in Eyecatcher location
+  {\includegraphics[height=3em]{images/psulogo.png}} 
+  % Title
+  {\bf\textsc{Creating a Poster with baposter in \LaTeX{} }\vspace{0.5em}}
+  % Authors
+  {\textsc{PRI Help Team}}
+  {% The makebox allows the title to flow into the logo, this is a hack because of the L shaped logo.
+   % Eye Catcher in Logo location
+    \includegraphics[height=4.0em]{images/pri-world.jpeg}
+  }
+
+
+%%POSTER CONTENTS
+%%
+%BOX 1
+\headerbox{Box 1}{name=box1,column=0,row=0}{
+blah
+}
+%BOX 2
+\headerbox{Box 2}{name=box2,column=0,below=box1}{
+blah blah
+}
+%BOX 3
+\headerbox{Box 3}{name=box3,column=1}{
+blah blah blah
+}
+%BOX 4
+\headerbox{Box 4}{name=box4,column=1,above=bottom,span=2}{
+blah blah blah, blah blah blah
+}
+%BOX 5
+\headerbox{Box 5}{name=box5,column=2}{
+blah blah
+}
+%BOX 6
+\headerbox{Box 6}{name=box6,column=3}{
+blah blah blah blah
+}
+\end{poster}
+\end{document}
