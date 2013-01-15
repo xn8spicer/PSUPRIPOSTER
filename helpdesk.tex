@@ -49,7 +49,7 @@
 % University logo in Eyecatcher location
   {\includegraphics[height=3em]{images/psulogo.png}} 
   % Title
-  {\bf\textsc{Creating a Poster with baposter in \LaTeX{} }\vspace{0.5em}}
+  {\bf\textsc{Need Help?}\vspace{0.5em}}
   % Authors
   {\textsc{PRI Help Team}}
   {% The makebox allows the title to flow into the logo, this is a hack because of the L shaped logo.
@@ -60,29 +60,45 @@
 
 %%POSTER CONTENTS
 %%
+%BOX 0
+\headerbox{Box 0}{name=box0,column=0,row=0, span=3}{
+Websites
+}
 %BOX 1
-\headerbox{Box 1}{name=box1,column=0,row=0}{
+\headerbox{Box 1}{name=box1,column=0,below=box0}{
 blah
 }
 %BOX 2
-\headerbox{Box 2}{name=box2,column=0,below=box1}{
-blah blah
+\headerbox{Box 2}{name=box2,column=0,below=box1, span=3}{
+Contact Info
 }
+
 %BOX 3
-\headerbox{Box 3}{name=box3,column=1}{
+\headerbox{Box 3}{name=box3,column=1, below=box0}{
 blah blah blah
 }
 %BOX 4
 \headerbox{Box 4}{name=box4,column=1,above=bottom,span=2}{
 blah blah blah, blah blah blah
+
+blah blah blah, blah blah blahblah blah blah, blah blah blah
+
+blah blah blah, blah blah blah
+blah blah blah, blah blah blah
+
+blah blah blah, blah blah blahblah blah blah, blah blah blah
+
+blah blah blah, blah blah blah
+
 }
 %BOX 5
-\headerbox{Box 5}{name=box5,column=2}{
+\headerbox{Box 5}{name=box5,column=2, below=box0}{
 blah blah
 }
 %BOX 6
-\headerbox{Box 6}{name=box6,column=3}{
+\headerbox{Box 6}{name=box6,column=3, below=box0, aligned=box2}{
 blah blah blah blah
 }
+
 \end{poster}
 \end{document}

@@ -114,9 +114,9 @@
   % University logo in Eyecatcher location
   {\includegraphics[height=3em]{images/psulogo.png}} 
   % Title
-  {\bf\textsc{Creating a Poster with the baposter package in LaTeX} \vspace{0.5em}}
+  {\bf\textsc{Creating a Poster with the baposter package in \LaTeX{} } \vspace{0.5em}}
   % Authors
-  {\textsc{\{ Brian.Amberg and Thomas.Vetter \}@unibas.ch}}
+  {\textsc{PRI Help Team}}
   {% The makebox allows the title to flow into the logo, this is a hack because of the L shaped logo.
    % Eye Catcher in Logo location
 %    \includegraphics[height=4.0em]{images/pri-world.jpeg}
@@ -144,28 +144,29 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \headerbox{Position00}{name=p00,column=0,row=0}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-   Numbering is 0-3 for a four columns.  So top, first column c=0
+   You can produce beautiful posters with \LaTeX{}.   The `beamer' package is probably the most full-featured package.  However, here we are going to use the `baposter' package as it is a big easier to learn.
+   The poster is organized into a grid of boxes with headers.  You can place 4 boxes per row you can go as high as 6, but that makes the text very small. The boxes can span muliple rows and multiple columns. The boxes are positioned by specifying the column followed by the row with numbering starting at 0.   So the first box in the upper-right corner of the poster is \texttt{column=0, row=0} 
     }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Position10}{name=p10,column=1,row=0}{
+  \headerbox{Position10}{name=p10,column=1,row=0, span=2}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-   Top, second column is c=1
-     \noindent{
-      \centering
-      \includegraphics[width=0.95\linewidth]{images/graph_occluded.pdf}\\}
+  The default title area is made up of an 3 parts: an eyecatcher graphic to appear in the upper-left corner, the title-author text centered and a logo graphic in the upper-right corner.  You do not have to use the the graphics in the corners.  
     }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Position20}{name=p20,column=2,row=0}{
+%  \headerbox{Position20}{name=p20,column=2,row=0}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-   Top third column, c=2
-
-    }
+%   OK 
+%   }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \headerbox{Position30}{name=p30,column=3,row=0}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   
    Top fourth column, c=3.  Can have 6, but default is 4
+   Here I am including a figure stored in a pdf file using \texttt{\textbackslash includegraphics}
+     \noindent{
+      \centering
+      \includegraphics[width=0.95\linewidth]{images/graph_occluded.pdf}\\}
     }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
